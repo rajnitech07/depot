@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+
+
+<h2>Versions</h2>
+<table>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Modifier</th>
+			<th>Action</th>
+			<th>Changes</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @user.versions.each do |version| %>
+			<%= tag.tr do %>
+				<%= tag.td version.id %>
+				<%= tag.td version.whodunnit %>
+				<%= tag.td link_to 'rollback',user_rollback_path(@user, version: version)%>
+				<%= tag.td do %>
+					<%= tag.ul class: 'list-group' do %>
+					<% end %>
+				<% end %>
+			<% end %>
+		<% end %>
+
+	</tbody>
+</table>
