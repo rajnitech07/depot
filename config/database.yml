@@ -24,11 +24,10 @@
 #   <<: *default
 #   database: db/production.sqlite3
 production:
-  adapter : mysql2
-  database : depot_db
-  username : root
-  password : root
-  host : localhost
+  adapter: postgresql
+  database: my_rajni_production
+  pool: 5
+  timeout: 5000
 
 development:
   adapter : mysql2
