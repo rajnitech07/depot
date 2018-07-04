@@ -25,7 +25,7 @@
 #   database: db/production.sqlite3
 production:
   adapter: postgresql
-  database: my_rajni_production
+  database: depot_db_production
   pool: 5
   timeout: 5000
 
