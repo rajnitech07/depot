@@ -18,7 +18,7 @@ group :development do
   gem 'mysql2', '~> 0.3.16'
 end
 
-group :production do
+group :development do
   gem 'pg'
 end
 

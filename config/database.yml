@@ -30,8 +30,8 @@ production:
   timeout: 5000
 
 development:
-  adapter : mysql2
+  adapter : postgresql
   database : depot_db
-  username : root
-  password : root
+  username : postgres
+  password : postgres
   host : localhost
